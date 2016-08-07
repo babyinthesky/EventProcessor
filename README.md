@@ -22,8 +22,7 @@ How to use:
     *From the command line under the same folder run:
       * "node main.js <filename>"
       
-      * Note! If the input filename does not exist locally, Processor continues to check up 
-      "obfuscated_data.xz" instead.
+      * If the input filename does not exist locally, Processor quits.
       
 
 An output example file is "output.log", which prints out the overall rows of the dataset, the launching times for different products, events with duplicated ID, events with suspicious timestamp, the amount of events at every hour and the device which has longest activity time. 
