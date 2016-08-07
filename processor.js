@@ -16,14 +16,21 @@ var Processor = function(){
 Start to process the file of event list.
 */
 Processor.prototype.startProcess=function(file){
-  var decompress = new xz.Decompressor();
+  var reader;
   var data = '';
   var rowCounter=0;
   var pro = this;
 
-  fs.createReadStream(file).pipe(decompress);
+  var arrfile=file.split('.');
+  if(arrfile[arrfile.length-1]!=='xz'){
+    reader=fs.createReadStream(file);
+  }
+  else{
+    reader=new xz.Decompressor();
+    fs.createReadStream(file).pipe(reader);
+  }
 
-  decompress.on('data',function(chunk){
+  reader.on('data',function(chunk){
     if(Buffer.isBuffer(chunk)) data+=chunk.toString();
     var endOfRow=data.indexOf('\n');
     while(endOfRow>0){
@@ -36,12 +43,12 @@ Processor.prototype.startProcess=function(file){
     console.log('Read: '+chunk.length+' Bytes');
   });
 
-  decompress.on('end',function(){
+  reader.on('end',function(){
     console.log('Number of Rows:'+ rowCounter + '\n');
     pro.printResult();
   })
 
-  decompress.on('error', function(err){
+  reader.on('error', function(err){
      console.log("Error: " + err.stack);
   });
 }
@@ -179,7 +186,7 @@ Processor.prototype.printResult=function(){
   })
 
   var minEvents = Math.min.apply(Math, pro.timeCounter);
-  var minHour = pro.timeCounter.indexOf(minEvents);
+  var minHour = pro.timeCounter.indexOf(minEvents.toString());
   console.log("The least active hour is hour "+minHour);
   console.log('***************************************************************\n');
 
