@@ -148,7 +148,7 @@ Processor.prototype.findMaxTimeGap=function(){
 
   var maxDeviceId=Object.keys(pro.deviceRecord).find(function(key){
     var diffTime = pro.deviceRecord[key].last-pro.deviceRecord[key].first;
-    return diffTime === maxTimeGap;
+    return diffTime == maxTimeGap;
   });
 
   return maxDeviceId;
@@ -186,7 +186,7 @@ Processor.prototype.printResult=function(){
   })
 
   var minEvents = Math.min.apply(Math, pro.timeCounter);
-  var minHour = pro.timeCounter.indexOf(minEvents.toString());
+  var minHour = pro.timeCounter.indexOf(minEvents);
   console.log("The least active hour is hour "+minHour);
   console.log('***************************************************************\n');
 
