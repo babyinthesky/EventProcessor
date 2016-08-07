@@ -8,7 +8,8 @@ How to use:
     Download file "main.js" and "processor.js" and save to a folder.
     
     *From the command line under this fodler run: 
-      * "node main.js"
+      * npm install    
+      * node main.js
     
     Processor defaultly runs check up for the online file 
     "http://ew1-fscdev-ds-public.s3-website-eu-west-1.amazonaws.com/obfuscated_data.xz" 
@@ -20,7 +21,7 @@ How to use:
     as "obfuscated_data.xz":
     
     *From the command line under the same folder run:
-      * "node main.js <filename>"
+      * node main.js <filename>
       
       * If the input filename does not exist locally, Processor quits.
       
