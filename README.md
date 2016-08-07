@@ -12,9 +12,12 @@ How to use:
     if there is no local file "obfuscated_data.xz" existing. 
     
     "obfuscated_data.xz" is a dataset with around 1.5 million events.
-    
+
+
   
-    Optionally, the processor can check up for other dataset files with the same structure as "obfuscated_data.xz":
+    Optionally, the processor can check up for other dataset files with the same structure
+    as "obfuscated_data.xz":
+    
     From command line run "node main.js <filename>"
 
   
