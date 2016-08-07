@@ -9,8 +9,13 @@ How to use:
     
     The processor defaultly runs check up for the online file 
     "http://ew1-fscdev-ds-public.s3-website-eu-west-1.amazonaws.com/obfuscated_data.xz" 
-    if there is no local "obfuscated_data.xz" file. 
+    if there is no local file "obfuscated_data.xz" existing. 
     
     "obfuscated_data.xz" is a dataset with around 1.5 million events.
+    
+  
+  Optionally, the processor can check up for other dataset files with the same structure as "obfuscated_data.xz"
+    From command line run "node main.js <filename>"
+    
   
   
