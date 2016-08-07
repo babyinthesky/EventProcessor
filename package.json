@@ -1,0 +1,11 @@
+{
+  "name": "processor",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "xz": "1.2.2"
+  }
+}
