@@ -5,7 +5,7 @@ An example of the dataset is in file exmple.txt, of which each row is one event 
 
 How to use:
   
-    Download file "main.js" and "processor.js" and save to a folder.
+    Download file "main.js", "processor.js", "package.json" and save them to a folder.
     
     *From the command line under this fodler run: 
       * npm install    
