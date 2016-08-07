@@ -8,7 +8,7 @@ var Processor = function(){
   this.eventList={};   //records every event_id as property and the number of occurence as value
   this.duplicaList=[]; //records the duplicated event_id
   this.timeErr=0;      //the number of events that send_timestamp is larger than received_timestamp
-  this.timeCounter=new Array(25).join(0).split('').map(parseFloat); //records the number of events for every hour
+  this.timeCounter=new Array(25).join('0').split('').map(parseFloat); //records the number of events for every hour
   this.deviceRecord={};//records every device_id as property and an object with timestamp of first/last event as value
 }
 
