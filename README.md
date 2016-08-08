@@ -21,9 +21,10 @@ If there is no local file "obfuscated_data.xz" exists, Processor downloads the f
     From the command line under the same folder run:
       $ node main.js <filename>
       
-      $ If the input filename does not exist locally, Processor quits.
+      **If the input filename does not exist locally, Processor quits.**
       
 
+### Others
 An output example file is "output.log", which prints out the overall rows of the dataset, the launching times for different products, events with duplicated ID, events with suspicious timestamp, the amount of events at every hour and the device which has longest activity time. 
 
   
