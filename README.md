@@ -18,10 +18,10 @@ If there is no local file "obfuscated_data.xz" exists, Processor downloads the f
     
 ### Optionally, Processor can analyze for other dataset files with the same structure as "obfuscated_data.xz":
     
-    From the command line under the same folder run:
+From the command line under the same folder run:
       $ node main.js <filename>
       
-      **If the input filename does not exist locally, Processor quits.**
+If the input filename does not exist locally, Processor quits.**
       
 
 ### Others
