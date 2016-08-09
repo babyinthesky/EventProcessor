@@ -10,7 +10,7 @@ An example of the dataset is in file exmple.txt, of which each row is one event 
 
 ### Step2. Download file "main.js", "processor.js", "package.json" and save them to a folder.
 
-### Step2. From the command line under this fodler run: 
+### Step3. From the command line under this fodler run: 
     $ npm install 
     $ node main.js
     
